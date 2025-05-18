@@ -1,0 +1,103 @@
+{
+  "vehicles": [
+    {
+      "image": "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747402439/pek6nsdpb4bwskilx7q2.jpg",
+      "vehicleName": "GMC YUKON XL OR SIMILAR 2024",
+      "numberOfSeats": "8",
+      "type": "suv",
+      "transmission": "automatic",
+      "id": 1747402476555,
+      "createdAt": "2025-05-16T13:34:36.555Z"
+    },
+    {
+      "image": "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747402692/j3rbuobycsoeh7jnc7z1.jpg",
+      "vehicleName": "GMC YUKON SLE OR SIMILAR 2023",
+      "numberOfSeats": "5",
+      "type": "sedan",
+      "transmission": "automatic",
+      "id": 1747402731357,
+      "createdAt": "2025-05-16T13:38:51.357Z"
+    },
+    {
+      "image": "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747508717/dqkxrbpvhiohzedsla92.jpg",
+      "vehicleName": "MERCEDES - BENZ VITO TOURER 2023 OR SIMILAR",
+      "numberOfSeats": "7",
+      "type": "suv",
+      "transmission": "automatic",
+      "id": 1747508752134,
+      "createdAt": "2025-05-17T19:05:52.135Z"
+    },
+    {
+      "image": "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747402777/ujoubxqv08mxfmtu0ptd.jpg",
+      "vehicleName": "TESLA MODEL Y DUAL MOTOR 2024 OR SIMILAR",
+      "numberOfSeats": "3",
+      "type": "compact-suv",
+      "transmission": "automatic",
+      "id": 1747402876921,
+      "createdAt": "2025-05-16T13:41:16.921Z"
+    },
+    {
+      "image": "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747509160/na77fhfeqez5b54uzfs3.jpg",
+      "vehicleName": "GAC GN8 OR SIMILAR 2023",
+      "numberOfSeats": "5",
+      "type": "compact-suv",
+      "transmission": "automatic",
+      "id": 1747509192679,
+      "createdAt": "2025-05-17T19:13:12.679Z"
+    },
+    {
+      "image": "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747511057/vbm6rw2dwqhaimjwwuhi.jpg",
+      "vehicleName": "TOYOTA HIGHLANDER HYBRID 2022",
+      "numberOfSeats": "7",
+      "type": "sedan",
+      "transmission": "automatic",
+      "id": 1747511114631,
+      "createdAt": "2025-05-17T19:45:14.631Z"
+    },
+    {
+      "image": "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747505696/u7n44mg9apfubbfczn11.jpg",
+      "vehicleName": "TOYOTA YARIS OR SIMILAR 2023",
+      "numberOfSeats": "4",
+      "type": "suv",
+      "transmission": "automatic",
+      "id": 1747505721759,
+      "createdAt": "2025-05-17T18:15:21.759Z"
+    },
+    {
+      "image": "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747402364/wz5z2iho51fj1pxnho4k.jpg",
+      "vehicleName": "GEELY EMGRAND OR SIMILAR 2024",
+      "numberOfSeats": "3",
+      "type": "sedan",
+      "transmission": "automatic",
+      "id": 1747402429777,
+      "createdAt": "2025-05-16T13:33:49.777Z"
+    },
+    {
+      "image": "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747514002/pjvatp4airvbulrfgvnm.jpg",
+      "vehicleName": "GEELY EMGRAND OR SIMILAR 2024",
+      "numberOfSeats": "3",
+      "type": "suv",
+      "transmission": "automatic",
+      "id": 1747514066948,
+      "createdAt": "2025-05-17T20:34:26.948Z"
+    },
+    {
+      "image": "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747558351/unxv9iq5v1od8de2do8g.png",
+      "vehicleName": "MERCEDES - BENZ VITO TOURER 2023 OR SIMILAR",
+      "numberOfSeats": "7",
+      "type": "suv",
+      "transmission": "automatic",
+      "id": 1747558379356,
+      "createdAt": "2025-05-18T08:52:59.356Z"
+    },
+    {
+      "image": "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747558868/kvyi2c2qrsheokndaclg.png",
+      "vehicleName": "MERCEDES - BENZ VITO TOURER 2023 OR SIMILAR",
+      "numberOfSeats": "7",
+      "type": "suv",
+      "transmission": "automatic",
+      "id": 1747558880226,
+      "createdAt": "2025-05-18T09:01:20.226Z"
+    }
+  ]
+}

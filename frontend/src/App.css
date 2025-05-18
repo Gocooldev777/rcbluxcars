@@ -1,0 +1,242 @@
+/* Reset any default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: #B8860B;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  height: calc(100vh - 80px);
+  /* Subtract navbar height */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: bold;
+  color: #B8860B;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  color: #B8860B;
+  margin-bottom: 2rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Button Styles */
+.explore-button {
+  background-color: #B8860B;
+  color: black;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.explore-button:hover {
+  background-color: #DAA520;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
+}
+
+/* Container Styles */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navigation Alignment */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Logo and Text Alignment */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  height: clamp(40px, 8vw, 60px);
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Button Group Alignment */
+.button-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Language Selector */
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0.5rem;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.auth-button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0.5rem;
+  }
+
+  .logo-container {
+    flex-shrink: 0;
+  }
+
+  .button-group {
+    width: 100%;
+    justify-content: center;
+    padding: 0.5rem 0;
+  }
+
+  .language-selector {
+    order: -1;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    padding: 0.5rem 0;
+  }
+
+  .auth-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .auth-button {
+    flex: 1;
+    max-width: 150px;
+  }
+
+  /* Adjust hero height for mobile */
+  .hero {
+    height: calc(100vh - 120px);
+    /* Account for wrapped navbar */
+    padding: 1rem 0.5rem;
+  }
+
+  .hero-content {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .explore-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .auth-button {
+    padding: 0.4rem 0.8rem;
+    min-width: 70px;
+    font-size: 0.875rem;
+  }
+}

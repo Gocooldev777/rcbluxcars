@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  html,
+  body {
+    @apply m-0 p-0 overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Remove default margins and ensure full coverage */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Animation Delays */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Bounce Animation */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.8);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(0) scale(1.1);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.bounce-text span {
+  display: inline-block;
+  animation: bounceIn 0.6s ease-out forwards;
+}
+
+/* Add stagger effect using delay classes */
+.bounce-text span:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.bounce-text span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.bounce-text span:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.bounce-text span:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.bounce-text span:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.bounce-text span:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.bounce-text span:nth-child(7) {
+  animation-delay: 0.35s;
+}
+
+.bounce-text span:nth-child(8) {
+  animation-delay: 0.4s;
+}
+
+.bounce-text span:nth-child(9) {
+  animation-delay: 0.45s;
+}
+
+.bounce-text span:nth-child(10) {
+  animation-delay: 0.5s;
+}
+
+.bounce-text span:nth-child(11) {
+  animation-delay: 0.55s;
+}
+
+.bounce-text span:nth-child(12) {
+  animation-delay: 0.6s;
+}
+
+.bounce-text span:nth-child(13) {
+  animation-delay: 0.65s;
+}
+
+.bounce-text span:nth-child(14) {
+  animation-delay: 0.7s;
+}
+
+.bounce-text span:nth-child(15) {
+  animation-delay: 0.75s;
+}
+
+.bounce-text span:nth-child(16) {
+  animation-delay: 0.8s;
+}
+
+.bounce-text span:nth-child(17) {
+  animation-delay: 0.85s;
+}
+
+.bounce-text span:nth-child(18) {
+  animation-delay: 0.9s;
+}
+
+.bounce-text span:nth-child(19) {
+  animation-delay: 0.95s;
+}
+
+.bounce-text span:nth-child(20) {
+  animation-delay: 1s;
+}
