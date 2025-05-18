@@ -12,8 +12,10 @@ import {
     UserGroupIcon,
     CreditCardIcon,
     UserIcon,
-    StarIcon
+    StarIcon,
+    TruckIcon
 } from '@heroicons/react/24/outline';
+import newLogo2 from '../../assets/New logo2 image main.png';
 
 export function OurService() {
     const features = [
@@ -223,12 +225,19 @@ export function OurService() {
                     transition={{ duration: 0.5, delay: 0.5 }}
                     className="text-center mt-16 bg-[#B8860B]/5 rounded-lg py-6 px-4"
                 >
-                    <motion.p
+                    <motion.div 
+                        className="relative inline-block mb-4"
                         whileHover={{ scale: 1.05 }}
-                        className="text-3xl font-bold text-[#B8860B] mb-2"
                     >
-                        A UNIT OF RB GROUP OF COMPANY
-                    </motion.p>
+                        <div className="absolute -inset-2 bg-gradient-to-r from-[#B8860B]/30 via-[#B8860B]/20 to-[#B8860B]/10 rounded-xl blur-md"></div>
+                        <div className="relative bg-black/70 p-4 rounded-xl border border-[#B8860B]/40">
+                            <img 
+                                src={newLogo2} 
+                                alt="RCB Luxury Car Rental" 
+                                className="h-20 w-auto object-contain mx-auto"
+                            />
+                        </div>
+                    </motion.div>
                     <motion.p
                         whileHover={{ scale: 1.05 }}
                         className="text-xl text-[#B8860B]/80"

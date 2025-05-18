@@ -6,6 +6,7 @@ import {
     GlobeAltIcon,
     SparklesIcon
 } from '@heroicons/react/24/outline';
+import newLogo2 from '../../assets/New logo2 image main.png';
 
 const CarIcon = ({ className }) => (
     <svg
@@ -193,18 +194,27 @@ export function AboutUs({ isOpen, onClose, isModal = false }) {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="text-center mt-16 space-y-1"
             >
-                <motion.p
+                <motion.div 
+                    className="flex flex-col items-center"
                     whileHover={{ scale: 1.05 }}
-                    className="text-base font-semibold text-[#B8860B] font-serif"
                 >
-                    A UNIT OF RB GROUP OF COMPANY
-                </motion.p>
-                <motion.p
-                    whileHover={{ scale: 1.05 }}
-                    className="text-base font-semibold text-[#B8860B] font-serif"
-                >
-                    DUBAI, UNITED ARAB EMIRATES
-                </motion.p>
+                    <div className="relative">
+                        <div className="absolute -inset-1 bg-gradient-to-r from-[#B8860B]/30 to-[#B8860B]/10 rounded-full blur-md"></div>
+                        <div className="relative bg-black p-3 rounded-full border border-[#B8860B]/40">
+                            <img 
+                                src={newLogo2} 
+                                alt="RCB Luxury Car Rental" 
+                                className="h-24 w-auto object-contain"
+                            />
+                        </div>
+                    </div>
+                    <motion.p
+                        whileHover={{ scale: 1.05 }}
+                        className="text-base font-semibold text-[#B8860B] font-serif mt-3"
+                    >
+                        DUBAI, UNITED ARAB EMIRATES
+                    </motion.p>
+                </motion.div>
             </motion.div>
         </div>
     );

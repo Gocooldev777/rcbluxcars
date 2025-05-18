@@ -19,15 +19,6 @@
       "createdAt": "2025-05-16T13:38:51.357Z"
     },
     {
-      "image": "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747508717/dqkxrbpvhiohzedsla92.jpg",
-      "vehicleName": "MERCEDES - BENZ VITO TOURER 2023 OR SIMILAR",
-      "numberOfSeats": "7",
-      "type": "suv",
-      "transmission": "automatic",
-      "id": 1747508752134,
-      "createdAt": "2025-05-17T19:05:52.135Z"
-    },
-    {
       "image": "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747402777/ujoubxqv08mxfmtu0ptd.jpg",
       "vehicleName": "TESLA MODEL Y DUAL MOTOR 2024 OR SIMILAR",
       "numberOfSeats": "3",
@@ -80,15 +71,6 @@
       "transmission": "automatic",
       "id": 1747514066948,
       "createdAt": "2025-05-17T20:34:26.948Z"
-    },
-    {
-      "image": "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747558351/unxv9iq5v1od8de2do8g.png",
-      "vehicleName": "MERCEDES - BENZ VITO TOURER 2023 OR SIMILAR",
-      "numberOfSeats": "7",
-      "type": "suv",
-      "transmission": "automatic",
-      "id": 1747558379356,
-      "createdAt": "2025-05-18T08:52:59.356Z"
     },
     {
       "image": "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747558868/kvyi2c2qrsheokndaclg.png",

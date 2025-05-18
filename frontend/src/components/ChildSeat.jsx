@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import newLogo2 from '../assets/New logo2 image main.png';
 
 const ChildSeat = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
@@ -88,8 +89,19 @@ const ChildSeat = ({ isOpen, onClose }) => {
                                     </section>
 
                                     <div className="text-center mt-8">
-                                        <p className="text-[#B8860B] font-semibold">A UNIT OF RB GROUP OF COMPANY</p>
-                                        <p className="text-[#B8860B]">DUBAI, UNITED ARAB EMIRATES</p>
+                                        <div className="flex justify-center">
+                                            <div className="relative inline-block">
+                                                <div className="absolute -inset-1 bg-gradient-to-r from-[#B8860B]/30 to-[#B8860B]/10 rounded-xl blur-md"></div>
+                                                <div className="relative bg-black/50 p-3 rounded-xl border border-[#B8860B]/40">
+                                                    <img 
+                                                        src={newLogo2} 
+                                                        alt="RCB Luxury Car Rental" 
+                                                        className="h-16 w-auto object-contain mx-auto"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p className="text-[#B8860B] mt-3">DUBAI, UNITED ARAB EMIRATES</p>
                                         <p className="text-sm italic text-[#B8860B]/70 mt-2">*T&C's Apply</p>
                                     </div>
                                 </div>

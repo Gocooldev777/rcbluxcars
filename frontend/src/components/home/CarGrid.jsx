@@ -16,9 +16,7 @@ export function CarGrid() {
             image: "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747402439/pek6nsdpb4bwskilx7q2.jpg",
             numberOfSeats: "5",
             luggage: "4",
-            transmission: "Automatic",
-            price: "338.27",
-            total: "1,353.01"
+            transmission: "Automatic"
         },
         {
             id: 1747402731357,
@@ -27,9 +25,7 @@ export function CarGrid() {
             image: "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747402692/j3rbuobycsoeh7jnc7z1.jpg",
             numberOfSeats: "5",
             luggage: "4",
-            transmission: "Automatic",
-            price: "351.97",
-            total: "1,407.93"
+            transmission: "Automatic"
         },
         {
             id: 1747508752134,
@@ -38,9 +34,7 @@ export function CarGrid() {
             image: "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747558868/kvyi2c2qrsheokndaclg.png",
             numberOfSeats: "7",
             luggage: "5",
-            transmission: "Automatic",
-            price: "425.99",
-            total: "1,703.96"
+            transmission: "Automatic"
         },
         {
             id: 1747402876921,
@@ -49,9 +43,7 @@ export function CarGrid() {
             image: "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747402777/ujoubxqv08mxfmtu0ptd.jpg",
             numberOfSeats: "5",
             luggage: "3",
-            transmission: "Automatic",
-            price: "389.99",
-            total: "1,559.96"
+            transmission: "Automatic"
         }
     ];
 
@@ -147,7 +139,7 @@ export function CarGrid() {
                                 
                                 {/* Car image */}
                                 <motion.div 
-                                    className="relative h-[200px] overflow-hidden z-10"
+                                    className="relative h-[240px] overflow-hidden z-10"
                                     whileHover="hover"
                                 >
                                     {isMercedes ? (
@@ -171,20 +163,11 @@ export function CarGrid() {
                                     )}
                                 </motion.div>
                                 
-                                {/* Footer with pricing */}
+                                {/* Footer with unlimited miles only */}
                                 <div className="p-5 relative z-10">
-                                    <div className="flex items-center text-green-500 mb-3">
+                                    <div className="flex items-center text-green-500">
                                         <CheckIcon className="w-5 h-5 mr-2" />
                                         <span>Unlimited miles</span>
-                                    </div>
-                                    
-                                    <div className="flex items-baseline">
-                                        <span className={`text-3xl font-bold ${isMercedes ? 'text-[#B8860B]' : 'text-white'}`}>
-                                            {car.price}
-                                        </span>
-                                        <span className="text-gray-400 ml-1 text-xl">د.إ</span>
-                                        <span className="text-gray-400 ml-2">/day</span>
-                                        <span className="text-gray-500 ml-3 text-sm">{car.total}د.إ total</span>
                                     </div>
                                 </div>
                             </motion.div>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import {
     UserGroupIcon,
     KeyIcon,
@@ -10,11 +9,8 @@ import {
 import { ViewCar } from './ViewCar';
 import carData from '../../Cloudinary/data.json';
 
-// Import all images from ShowRoom folder
-const images = import.meta.glob('../../assets/ShowRoom/*.(png|jpg|jpeg)', { eager: true });
-
 const FilterButton = ({ label, isOpen, onClick, children }) => (
-    <motion.div className="relative">
+    <div className="relative">
         <button
             onClick={onClick}
             className="flex items-center space-x-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors duration-200"
@@ -23,63 +19,18 @@ const FilterButton = ({ label, isOpen, onClick, children }) => (
             <ChevronDownIcon className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
         </button>
         {isOpen && (
-            <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
+            <div
                 className="absolute top-full mt-2 w-48 bg-black/90 backdrop-blur-sm rounded-lg shadow-xl border border-[#FFD700]/20 z-50"
             >
                 {children}
-            </motion.div>
-        )}
-    </motion.div>
-);
-
-const CarImageBackground = ({ children }) => (
-    <div className="relative h-64 rounded-xl mb-6 overflow-hidden group">
-        {/* Premium dark gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1f25] via-[#232b35] to-[#1a1f25]">
-            {/* Animated subtle gradient overlay */}
-            <div className="absolute inset-0 opacity-40 bg-gradient-to-r from-transparent via-black/10 to-transparent animate-gradient" />
-
-            {/* Dynamic floor reflection */}
-            <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#1a1f25] via-[#232b35]/50 to-transparent transform-gpu" />
-
-            {/* Dramatic spotlight effect */}
-            <div
-                className="absolute inset-0 opacity-60"
-                style={{
-                    background: 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 25%, transparent 50%)'
-                }}
-            />
-
-            {/* Side accent lights */}
-            <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#FFD700]/5 to-transparent" />
-            <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#FFD700]/5 to-transparent" />
-
-            {/* Hover effects */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute inset-0 bg-gradient-to-t from-[#FFD700]/10 to-transparent" />
-                <div
-                    className="absolute inset-0"
-                    style={{
-                        background: 'radial-gradient(circle at 50% 50%, rgba(255,215,0,0.15) 0%, transparent 60%)'
-                    }}
-                />
             </div>
-        </div>
-
-        {/* Car image container with enhanced positioning */}
-        <div className="relative h-full flex items-center justify-center p-4">
-            {children}
-        </div>
+        )}
     </div>
 );
 
 export default function ShowroomCars() {
     const [selectedCar, setSelectedCar] = useState(null);
     const [activeFilters, setActiveFilters] = useState({
-        sort: false,
         vehicleType: false,
         gearshift: false,
         passengers: false,
@@ -88,7 +39,6 @@ export default function ShowroomCars() {
 
     // Filter values
     const [filters, setFilters] = useState({
-        sort: 'price-low', // price-low, price-high
         vehicleType: 'all', // all, SUV, Sedan, Sports
         gearshift: 'all', // all, Automatic, Manual
         passengers: 'all', // all, 2, 4, 5
@@ -100,7 +50,7 @@ export default function ShowroomCars() {
 
     // Use data from data.json to set cars
     useEffect(() => {
-        const generatedCars = carData.vehicles.map((vehicle, index) => ({
+        const generatedCars = carData.vehicles.map((vehicle) => ({
             id: vehicle.id,
             name: vehicle.vehicleName,
             category: vehicle.type,
@@ -109,10 +59,6 @@ export default function ShowroomCars() {
                 passengers: parseInt(vehicle.numberOfSeats),
                 doors: 4, // Assuming 4 doors as default
                 transmission: vehicle.transmission
-            },
-            price: {
-                daily: 100, // Placeholder value
-                total: 400  // Placeholder value
             }
         }));
 
@@ -139,13 +85,6 @@ export default function ShowroomCars() {
             result = result.filter(car => car.specs.passengers === parseInt(filters.passengers));
         }
 
-        // Apply sorting
-        if (filters.sort === 'price-low') {
-            result.sort((a, b) => a.price.daily - b.price.daily);
-        } else if (filters.sort === 'price-high') {
-            result.sort((a, b) => b.price.daily - a.price.daily);
-        }
-
         setFilteredCars(result);
     }, [filters, cars]);
 
@@ -167,51 +106,11 @@ export default function ShowroomCars() {
         }));
     };
 
-    const cardVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.5
-            }
-        },
-        hover: {
-            scale: 1.02,
-            transition: {
-                duration: 0.2
-            }
-        }
-    };
-
     return (
         <>
             <div className="min-h-screen bg-[#0a0c0f] text-white p-4 sm:p-6 md:p-8">
                 {/* Filters Section */}
                 <div className="flex flex-wrap gap-2 sm:gap-4 mb-6 sm:mb-8">
-                    <FilterButton
-                        label="Sort by"
-                        isOpen={activeFilters.sort}
-                        onClick={() => toggleFilter('sort')}
-                    >
-                        <div className="p-2">
-                            <button
-                                className={`w-full text-left px-4 py-2 hover:bg-white/5 rounded flex items-center justify-between ${filters.sort === 'price-low' ? 'text-[#FFD700]' : ''}`}
-                                onClick={() => handleFilterChange('sort', 'price-low')}
-                            >
-                                <span>Price (Low to High)</span>
-                                {filters.sort === 'price-low' && <CheckIcon className="w-4 h-4" />}
-                            </button>
-                            <button
-                                className={`w-full text-left px-4 py-2 hover:bg-white/5 rounded flex items-center justify-between ${filters.sort === 'price-high' ? 'text-[#FFD700]' : ''}`}
-                                onClick={() => handleFilterChange('sort', 'price-high')}
-                            >
-                                <span>Price (High to Low)</span>
-                                {filters.sort === 'price-high' && <CheckIcon className="w-4 h-4" />}
-                            </button>
-                        </div>
-                    </FilterButton>
-
                     <FilterButton
                         label="Vehicle type"
                         isOpen={activeFilters.vehicleType}
@@ -298,12 +197,9 @@ export default function ShowroomCars() {
 
                 {/* Cars Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-                    {filteredCars.map((car, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
+                    {filteredCars.map((car) => (
+                        <div
+                            key={car.id}
                             onClick={() => setSelectedCar(car)}
                             className="bg-gradient-to-br from-[#1a1f25] to-[#0a0c0f] rounded-xl p-3 sm:p-4 cursor-pointer transform hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-[#FFD700]/10 min-w-[280px] w-full mx-auto"
                         >
@@ -328,27 +224,28 @@ export default function ShowroomCars() {
                             </div>
 
                             <div className="relative h-40 sm:h-48 rounded-xl mb-3 sm:mb-4 overflow-hidden">
-                                <motion.img
+                                <img
                                     src={car.image}
                                     alt={car.name}
                                     className="w-full h-full object-contain sm:object-cover"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ duration: 0.5 }}
                                 />
                             </div>
 
                             <div className="flex flex-col items-center gap-1.5 sm:gap-2">
-                                <motion.a
+                                <div className="w-full flex items-center justify-center bg-black/30 px-3 py-2 rounded-lg text-green-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                    <span>Unlimited miles</span>
+                                </div>
+                                <a
                                     href="https://wa.me/971501059047"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    whileHover={{ scale: 1.02 }}
-                                    whileTap={{ scale: 0.98 }}
                                     className="w-full bg-[#1a1a1a] hover:bg-[#252525] text-[#FFD700] py-1.5 sm:py-2 rounded-lg font-semibold text-center border border-[#333333] shadow-[0_0_10px_rgba(255,255,255,0.1)] text-sm sm:text-base cursor-pointer"
                                 >
                                     BOOK NOW
-                                </motion.a>
+                                </a>
                                 <div className="w-full flex flex-col gap-1.5 sm:gap-2">
                                     <div className="w-full bg-[#1a1a1a] hover:bg-[#252525] text-[#FFD700] py-1.5 sm:py-2 rounded-lg font-semibold text-center flex items-center justify-center gap-1.5 sm:gap-2 border border-[#333333] shadow-[0_0_10px_rgba(255,255,255,0.1)]">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 20 20" fill="currentColor">
@@ -364,7 +261,7 @@ export default function ShowroomCars() {
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>
@@ -377,16 +274,4 @@ export default function ShowroomCars() {
             )}
         </>
     );
-}
-
-// Add this to your CSS
-const styles = `
-@keyframes gradient {
-    0% { transform: translateX(-50%) }
-    50% { transform: translateX(50%) }
-    100% { transform: translateX(-50%) }
-}
-.animate-gradient {
-    animation: gradient 8s linear infinite;
-}
-`; 
+} 

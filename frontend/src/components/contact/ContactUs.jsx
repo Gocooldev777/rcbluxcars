@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPinIcon } from '@heroicons/react/24/outline';
 import qrCode from '../../assets/contact/business-card.png';
+import newLogo2 from '../../assets/New logo2 image main.png';
 
 export default function ContactUs() {
     return (
@@ -42,9 +43,18 @@ export default function ContactUs() {
                             />
                         </div>
 
-                        {/* Footer Text */}
-                        <div className="text-center space-y-0.5">
-                            <p className="text-white text-sm font-medium">A UNIT OF RB GROUP OF COMPANY</p>
+                        {/* Logo and Location */}
+                        <div className="text-center space-y-3">
+                            <div className="relative inline-block">
+                                <div className="absolute -inset-1 bg-gradient-to-r from-[#B8860B]/30 to-[#B8860B]/10 rounded-lg blur-sm"></div>
+                                <div className="relative bg-black p-2 rounded-lg border border-[#B8860B]/40">
+                                    <img 
+                                        src={newLogo2} 
+                                        alt="RCB Luxury Car Rental" 
+                                        className="h-12 w-auto object-contain mx-auto"
+                                    />
+                                </div>
+                            </div>
                             <p className="text-white text-sm font-medium">DUBAI, UNITED ARAB EMIRATES</p>
                             <p className="text-xs text-gray-500">*T&C'S APPLY</p>
                         </div>
