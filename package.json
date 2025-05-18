@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "cd frontend && npm install && npm run build",
-    "start": "cd frontend && npm start",
+    "build": "bash ./build.sh",
+    "start": "cd frontend && npm run preview",
     "dev": "cd frontend && npm run dev"
   },
   "engines": {
