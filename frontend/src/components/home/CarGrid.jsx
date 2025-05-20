@@ -11,39 +11,39 @@ export function CarGrid() {
     const cars = [
         {
             id: 1747402476555,
-            vehicleName: "STANDARD (VOLKSWAGEN JETTA)",
-            subtitle: "or similar | Saloon",
+            vehicleName: "GMC YUKON XL OR SIMILAR 2024",
+            subtitle: "or similar | suv",
             image: "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747402439/pek6nsdpb4bwskilx7q2.jpg",
-            numberOfSeats: "5",
+            numberOfSeats: "8",
             luggage: "4",
-            transmission: "Automatic"
+            transmission: "automatic"
         },
         {
             id: 1747402731357,
-            vehicleName: "FULL-SIZE (TOYOTA CAMRY)",
-            subtitle: "or similar | Saloon",
+            vehicleName: "GMC YUKON SLE OR SIMILAR 2023",
+            subtitle: "or similar | sedan",
             image: "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747402692/j3rbuobycsoeh7jnc7z1.jpg",
             numberOfSeats: "5",
             luggage: "4",
-            transmission: "Automatic"
+            transmission: "automatic"
         },
         {
             id: 1747508752134,
-            vehicleName: "MERCEDES - BENZ VITO TOURER 2023",
-            subtitle: "or similar | Premium",
+            vehicleName: "MERCEDES - BENZ VITO TOURER 2023 OR SIMILAR",
+            subtitle: "or similar | premium",
             image: "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747558868/kvyi2c2qrsheokndaclg.png",
             numberOfSeats: "7",
             luggage: "5",
-            transmission: "Automatic"
+            transmission: "automatic"
         },
         {
             id: 1747402876921,
-            vehicleName: "TESLA MODEL Y DUAL MOTOR 2024",
-            subtitle: "or similar | Electric",
+            vehicleName: "TESLA MODEL Y DUAL MOTOR 2024 OR SIMILAR",
+            subtitle: "or similar | electric",
             image: "https://res.cloudinary.com/dzonwo3nn/image/upload/v1747402777/ujoubxqv08mxfmtu0ptd.jpg",
             numberOfSeats: "5",
             luggage: "3",
-            transmission: "Automatic"
+            transmission: "automatic"
         }
     ];
 
