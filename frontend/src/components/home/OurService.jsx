@@ -16,6 +16,7 @@ import {
     TruckIcon
 } from '@heroicons/react/24/outline';
 import newLogo2 from '../../assets/New logo2 image main.png';
+import vehicleContractPDF from '../../assets/english+arabic[1].pdf';
 
 export function OurService() {
     const features = [
@@ -90,6 +91,21 @@ export function OurService() {
             title: 'PREMIUM',
             subtitle: 'QUALITY',
             description: 'Luxury standard'
+        },
+        {
+            icon: <TruckIcon className="w-8 h-8 text-[#392E26]" />,
+            title: 'VEHICLE',
+            subtitle: 'CONTRACT',
+            description: (
+                <a
+                    href={vehicleContractPDF}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-[#B8860B] transition-colors duration-200"
+                >
+                    View PDF
+                </a>
+            )
         }
     ];
 
